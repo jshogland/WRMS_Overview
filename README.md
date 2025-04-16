@@ -1,6 +1,6 @@
 # WRMS_Overview
-## Overview of WRMS team coding repository
+
 ## Check out our landing page
 
-- [WRMS team](/index.html)
+- [WRMS team](https://jshogland.github.io/WRMS_Overview/)
 
