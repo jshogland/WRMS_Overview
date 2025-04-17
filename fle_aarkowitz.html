@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fireline Effectiveness - WRMS</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #333;
+      margin: 0;
+      padding: 1.5em;
+      background-color: #f5f7fa;
+    }
+  
+    .container {
+      width: 100%;
+      background: #fff;
+      padding: 1.5em 4vw;
+      box-sizing: border-box;
+      animation: fadeIn 0.8s ease-in;
+    }
+  
+    nav {
+      background-color: #f0f0f0;
+      padding: 0.5em 1em;
+      margin-bottom: 1.2em;
+      border-radius: 5px;
+    }
+  
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+  
+    nav li {
+      display: inline;
+    }
+  
+    nav a {
+      font-weight: bold;
+      color: #205d74;
+      text-decoration: none;
+    }
+  
+    nav a:hover {
+      text-decoration: underline;
+    }
+  
+    h1, h2, h3 {
+      color: #205d74;
+    }
+  
+    h1 {
+      font-size: 2em;
+      border-bottom: 2px solid #205d74;
+      padding-bottom: 0.3em;
+      margin-bottom: 0.75em;
+    }
+  
+    h2 {
+      font-size: 1.4em;
+      margin-top: 1.4em;
+      margin-bottom: 0.6em;
+    }
+  
+    p, li {
+      margin-bottom: 0.6em;
+    }
+  
+    a {
+      color: #205d74;
+      text-decoration: none;
+    }
+  
+    a:hover {
+      text-decoration: underline;
+    }
+  
+    blockquote {
+      font-style: italic;
+      background: #eef4f7;
+      border-left: 4px solid #205d74;
+      margin: 0.8em 0;
+      padding: 0.6em 1em;
+    }
+  
+    iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+    }
+  
+    th, td {
+      padding: 0.5em;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      font-size: 13px;
+    }
+  
+    th {
+      background-color: #eef4f7;
+      color: #205d74;
+      font-weight: 600;
+    }
+  
+    td:first-child {
+      font-weight: bold;
+      color: #333;
+    }
+  
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Enhancing Wildfire Response Through Fireline Effectiveness Analysis</h1>
+
+    <nav>
+      <ul>
+        <li><a href="#why">Why This Work Matters</a></li>
+        <li><a href="#dataset">National Dataset</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#drivers">Performance Drivers</a></li>
+        <li><a href="#case-study">Klamath Case Study</a></li>
+        <li><a href="#pods">POD Evaluation</a></li>
+        <li><a href="#tools">Tools & Training</a></li>
+        <li><a href="#next">What's Next</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <p><strong>Wildfire Risk Management Science (WRMS)</strong><br>
+    <em>By Alexander Arkowitz, CSU &amp; USFS RMRS</em></p>
+
+    <h2 id="why">Why This Work Matters</h2>
+    <p>Wildland fire response is resource-intensive, high-risk, and increasingly complex. To improve outcomes, we need a better understanding of what has worked — and why. The Human Dimensions WRMS team work helps meet this need by analyzing where firelines successfully held, burned over, or were not engaged across hundreds of large wildfires. This evidence-based approach provides the Forest Service with actionable insights to improve strategic planning, firefighter safety, and real-time decision-making.</p>
+
+    <h2 id="dataset">Fireline Effectiveness: A National Dataset</h2>
+    <blockquote><strong>Firelines analyzed on 1150+ fires (all fires in NIFC Open Data &gt;1000 acres) from 2017–2024</strong><br>
+    <strong>&gt;63,000 Miles of fireline classified and quality-assured</strong></blockquote>
+
+    <p>Working with the NIFC national fireline dataset, we developed a comprehensive QAQC pipeline to clean, validate, and classify fireline engagement outcomes. Each fireline segment is categorized as:</p>
+
+    <!-- Engagement Categories Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Held</td>
+          <td>Successfully stopped the fire</td>
+        </tr>
+        <tr>
+          <td>Not Engaged</td>
+          <td>Constructed but not tested by fire</td>
+        </tr>
+        <tr>
+          <td>Burned Over</td>
+          <td>Failed to contain the fire</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>To assess and compare fireline effectiveness across incidents and regions, we calculate a suite of Fireline Effectiveness (FLE) metrics, including:</p>
+
+    <!-- FLE Metrics Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HTr</td>
+          <td>Held to Total Line Ratio</td>
+        </tr>
+        <tr>
+          <td>Tr</td>
+          <td>Total Fireline Length to Fire Perimeter Ratio</td>
+        </tr>
+        <tr>
+          <td>HEr</td>
+          <td>Held to Engaged Line Ratio</td>
+        </tr>
+        <tr>
+          <td>Er</td>
+          <td>Engaged to Total Line Ratio</td>
+        </tr>
+        <tr>
+          <td>BTr</td>
+          <td>Burned Over to Total Line Ratio</td>
+        </tr>
+        <tr>
+          <td>NeTr</td>
+          <td>Not Engaged to Total Line Ratio</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>These metrics provide a standardized basis for evaluating suppression performance, both within and across wildfire incidents. The QAQC-processed dataset is available via the <a href="https://doi.org/10.2737/RDS-2025-0011" target="_blank"><strong>USFS Research Data Archive (RDS-2025-0011)</strong></a>, and the supporting tools and workflows are hosted on <a href="https://github.com/aarkow/NIFC-QAQC-FLE" target="_blank"><strong>GitHub</strong></a>. The methods have been peer-reviewed and accepted for publication in <em>Nature Scientific Data</em>.</p>
+
+    <h2 id="dashboard">📊 Interactive Dashboard</h2>
+    <iframe 
+      title="Fireline Effectiveness Dashboard"
+      src="https://csurams.maps.arcgis.com/apps/dashboards/4ba7dbbc420b401192b880c32ce7be6f">
+    </iframe>
+
+    <h2 id="drivers">Understanding Fireline Performance Drivers</h2>
+    <p>To better understand why firelines perform differently, I spatially linked 2022–2023 firelines (with 2024 incidents ongoing) to a suite of landscape and operational datasets. These variables were extracted <strong>per incident and per fireline engagement category</strong>—Held, Burned Over, and Not Engaged—to enable a more nuanced analysis of fireline effectiveness across diverse conditions.</p>
+
+    <!-- Landscape & Operational Variables Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Variable Group</th>
+          <th>Data Elements</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Vegetation &amp; Fuels</td>
+          <td>EVT groups, FM40 fuel models</td>
+        </tr>
+        <tr>
+          <td>Operational Inputs</td>
+          <td>Personnel days, injuries</td>
+        </tr>
+        <tr>
+          <td>Terrain &amp; Risk</td>
+          <td>Slope, snag hazard, evacuation time (GET)</td>
+        </tr>
+        <tr>
+          <td>Strategic Planning</td>
+          <td>Potential Control Locations (PCL), Line Suitability Index (LSI), Suppression Difficulty Index (SDI)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>This structured approach supports deeper insight into key metrics such as:</p>
+    <ul>
+      <li>Injuries per mile of line</li>
+      <li>Line/person/day ratios</li>
+      <li>Resistance to control by fuel group</li>
+      <li>Strategic reuse potential of previous firelines</li>
+    </ul>
+    <p>By capturing conditions specific to each incident and fireline category, this enables more targeted comparisons and supports operational learning at both local and regional scales.</p>
+
+    <h2 id="case-study">Case Study: Klamath-Trinity Region</h2>
+    <p>As part of a collaborative research effort with the Wildfire Treatment Outcomes Research Team, we focused on the Klamath-Trinity region to better understand what drives fireline containment success in some of the most operationally challenging landscapes in the western U.S. Our team developed a spatial matching workflow that pairs held, burned over, and not engaged fireline segments with comparison points outside of fuel treatments, matched on topography, fuels, weather, and operational conditions. This allowed us to isolate the effects of strategic decisions from environmental variability.</p>
+
+    <p>To refine our understanding of what drives fireline success, we sampled conditions at specific locations along the fireline—extracting values for topography, fuels, suppression effort, and other key variables at each point. We also incorporated an "upwind" perspective by summarizing factors the fire encountered just prior to reaching the sample location, such as fuel treatments and earlier containment actions. This point-based dataset was used in combination with spatial subsampling, recursive feature elimination, and random forest classification to identify the strongest predictors of fireline performance. This work offers a scalable approach for evaluating fireline effectiveness across diverse fire-prone landscapes.</p>
+
+    <h2 id="pods">Evaluating POD Boundary Effectiveness</h2>
+    <p>I adapted the fireline effectiveness workflow to examine the use and performance of Potential Operational Delineations (PODs):</p>
+    <ul>
+      <li>How often firelines follow PODs</li>
+      <li>Historical effectiveness of PODs</li>
+      <li>Use trends across states, forests, and FS regions</li>
+    </ul>
+    <p>This supports refinement of POD development and planning practices.</p>
+
+    <h2 id="tools">Tools, Training, and Collaboration</h2>
+    <p>This work is part of WRMS efforts and has been shared at conferences with Washington DNR, USFS Ops, and wildfire researchers. 
+
+    <h2 id="next">What’s Next</h2>
+    <ul>
+      <li>Expanding POD alignment metrics</li>
+      <li>Scaling ML containment modeling to new regions</li>
+      <li>Integrating with RMA and other operational systems</li>
+    </ul>
+
+    <h2 id="contact">Contact</h2>
+    <p><strong>Alexander Arkowitz</strong><br>
+    Senior Geospatial Wildfire Analyst<br>
+    Colorado State University & USFS Rocky Mountain Research Station<br>
+    📧 alexander.arkowitz@colostate.edu</p>
+    <p>
+      🔗 <a href="https://doi.org/10.2737/RDS-2025-0011" target="_blank">Dataset – USFS RDS-2025-0011</a><br>
+      🔗 <a href="https://github.com/aarkow/NIFC-QAQC-FLE" target="_blank">Code – GitHub Repo</a>
+    </p>
+  </div>
+</body>
+</html>
