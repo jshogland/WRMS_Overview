@@ -2,59 +2,59 @@
 <html lang="en">
     <head>
         <title> Team </title>
-        <style>
-            
-            .center {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                padding-left: 60px;
-            }
-        </style>
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <h1 style="align-content: center;text-align: center;">
             Meet the Team
         </h1>
-        <article style="padding: 1%;">
-            <img src="images/Hogland.png" style="float: left;width: 25%;padding: 2%;">
-            <p style="float: right;width: 70%;color: black; font-size: small;">
-                Dr. Hogland is a Research Forester working for the Rocky Mountain Research Station. 
-                His research interests revolve around quantitative methods within geographic information systems (GIS) and understanding the relationships between 
-                landscape patterns and forested ecosystems processes. Current projects include: 1) quantifying forest characteristics at fine spatial scales, 2) 
-                designing, developing, and building new procedures that integrate machine learning and statistical modeling with fast raster processing (Function Modeling) 
-                to streamline spatial modeling and reduce storage space associated wit
-                h GIS analyses, and 3) developing sampling strategies focused on reducing the cost of 
-                sampling while maintaining the characteristics of a representative sample. 
-            </p>
-            <a href="https://sites.google.com/view/hoglandsspatialsolutions/home" style="width: 100%;float:left;">
-                Personal Website
-            </a>
-            
-        </article>
-        <article style="padding: 1%;">
-            <img src="images/Arkowitz.jpg" style="float: left;width: 25%;padding: 2%;">
-            <p style="float: right;width: 70%;color: black; font-size: small;">
-                Alexander P. Arkowitz is a Geospatial Wildfire Analytics Research Associate with Colorado State University and a contractor for the 
-                US Forest Service – Rocky Mountain Research Station. He leads research on wildfire containment and suppression effectiveness, developing 
-                spatial models to evaluate fireline engagement, fuel treatment performance, and operational strategies. With over a decade of experience 
-                in wildfire science, emergency response, and geospatial analysis, Alex has contributed to national fireline datasets, incident mapping, 
-                and situational awareness tools for agencies including the USFS, BLM, and NOAA. He holds an M.S. in Applied Geospatial Sciences from 
-                Northern Arizona University and is FAA-certified as a remote pilot.
-            </p>
-      
-            <a href="https://csurams.maps.arcgis.com/apps/dashboards/4ba7dbbc420b401192b880c32ce7be6f" style="width: 100%;float:left;">
-                Fireline Effectiveness Dashboard
-            </a>
-            
-        </article>
-
-        <nav style="float: bottom; padding:5%; width: 100%; align-content: center; font-size: large; font-weight: bold;">
-            <a href="./about.html" style="padding: 7%;">About</a>
+        <div class="bio">
+            <div class="flex-row">
+                <img src="images/Hogland.png" style="width:11vw">
+                <p style="float: right;width: 70%;color: black;font-size: 1.2vw;">
+                    Dr. John Hogland is a Research Forester working for the Rocky Mountain Research Station. 
+                    His research interests revolve around quantitative methods within geographic information systems (GIS) and understanding the relationships between 
+                    landscape patterns and forested ecosystems processes. Current projects include: 1) quantifying forest characteristics at fine spatial scales, 2) 
+                    designing, developing, and building new procedures that integrate machine learning and statistical modeling with fast raster processing (Function Modeling) 
+                    to streamline spatial modeling and reduce storage space associated wit
+                    h GIS analyses, and 3) developing sampling strategies focused on reducing the cost of 
+                    sampling while maintaining the characteristics of a representative sample. 
+                </p>
+            </div>
+            <div class="flex-row">
+                <a href="https://sites.google.com/view/hoglandsspatialsolutions/home" style="font-size:1.2vw;">
+                    Personal Website
+                </a>
+            </div>
+        </div>
+        <div class="bio">
+            <div class="flex-row">
+                <img src="images/Arkowitz.jpg" style="width:11vw">
+                <p style="float: right;width: 70%;color: black;font-size: 1.2vw;">
+                    Alexander P. Arkowitz is a Geospatial Wildfire Analytics Research Associate with Colorado State University and a contractor for the 
+                    US Forest Service – Rocky Mountain Research Station. He leads research on wildfire containment and suppression effectiveness, developing 
+                    spatial models to evaluate fireline engagement, fuel treatment performance, and operational strategies. With over a decade of experience 
+                    in wildfire science, emergency response, and geospatial analysis, Alex has contributed to national fireline datasets, incident mapping, 
+                    and situational awareness tools for agencies including the USFS, BLM, and NOAA. He holds an M.S. in Applied Geospatial Sciences from 
+                    Northern Arizona University and is FAA-certified as a remote pilot. 
+                </p>
+            </div>
+            <div class="flex-row">
+                <a href="./fle_aarkowitz.html" style="font-size:1.2vw;">
+                    Dashboard Project
+                </a>
+            </div>
+        </div>
+        
+        <div class="flex-row" style="font-size: large; font-weight: bold;">
+           <a href="./about.html" style="padding: 7%;">About</a>
             <a href="./index.html" style="padding: 7%;">WRMS</a>
             <a href="./projects.html" style="padding: 7%;">Projects</a>
             <a href="./resources.html" style="padding: 7%;">Resources</a>
-        </nav>
+        </div>
+
+        
+      
 
 
     </body>
